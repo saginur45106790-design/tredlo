@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: tredlo
+      POSTGRES_PASSWORD: tredlo_dev_password
+      POSTGRES_DB: tredlo
+    ports: ["5432:5432"]
+    volumes: [tredlo_pg:/var/lib/postgresql/data]
+volumes:
+  tredlo_pg:

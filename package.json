@@ -1,0 +1,12 @@
+{
+  "name":"tredlo-real-market-starter",
+  "private":true,
+  "workspaces":["apps/web","apps/api","packages/shared"],
+  "scripts":{
+    "dev:web":"npm --workspace @tredlo/web run dev",
+    "dev:api":"npm --workspace @tredlo/api run dev",
+    "db:generate":"npm --workspace @tredlo/api run db:generate",
+    "db:push":"npm --workspace @tredlo/api run db:push",
+    "build":"npm run build --workspaces"
+  }
+}
